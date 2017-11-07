@@ -2475,9 +2475,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(BootstrapTable, 'BootstrapTable', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/BootstrapTable.js');
+	  __REACT_HOT_LOADER__.register(BootstrapTable, 'BootstrapTable', 'C:/Users/L450/Desktop/react-bootstrap-table/src/BootstrapTable.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/BootstrapTable.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/BootstrapTable.js');
 	}();
 
 	;
@@ -3823,11 +3823,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	    }
 
+	    var _extends = Object.assign || function (target) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            var source = arguments[i];
+
+	            for (var key in source) {
+	                if (Object.prototype.hasOwnProperty.call(source, key)) {
+	                    target[key] = source[key];
+	                }
+	            }
+	        }
+
+	        return target;
+	    };
+
 	    var insertFunc = function insertFunc(msg, data, condition) {
 	        var id = _sAlertTools2.default.randomId();
 	        _sAlertStore2.default.dispatch({
 	            type: 'INSERT',
-	            data: Object.assign({}, data, {
+	            data: _extends({}, data, {
 	                id: id,
 	                condition: condition,
 	                message: msg
@@ -3864,54 +3878,70 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var storeStateBottom = void 0;
 
 	                var addToStoreRight = function addToStoreRight() {
-	                    var length = void 0;
-	                    storeStateRight = (0, _sAlertDataPrep2.default)('right') || [];
-	                    length = storeStateRight.length;
-	                    if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
-	                        var id = storeStateRight[0].id;
-	                        _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
-	                        storeStateRight = (0, _sAlertDataPrep2.default)('right') || [];
-	                    }
-	                    _this2.setState({ dataRight: storeStateRight });
+	                    requestAnimationFrame(function () {
+	                        return requestAnimationFrame(function () {
+	                            var length = void 0;
+	                            storeStateRight = (0, _sAlertDataPrep2.default)('right') || [];
+	                            length = storeStateRight.length;
+	                            if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
+	                                var id = storeStateRight[0].id;
+	                                _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
+	                                storeStateRight = (0, _sAlertDataPrep2.default)('right') || [];
+	                            }
+	                            _this2.setState({ dataRight: storeStateRight });
+	                        });
+	                    });
 	                };
 	                this.unsubStoreRight = _sAlertStore2.default.subscribe(addToStoreRight);
 
 	                var addToStoreLeft = function addToStoreLeft() {
-	                    var length = void 0;
-	                    storeStateLeft = (0, _sAlertDataPrep2.default)('left') || [];
-	                    length = storeStateLeft.length;
-	                    if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
-	                        var id = storeStateLeft[0].id;
-	                        _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
-	                        storeStateLeft = (0, _sAlertDataPrep2.default)('left') || [];
-	                    }
-	                    _this2.setState({ dataLeft: storeStateLeft });
+	                    requestAnimationFrame(function () {
+	                        return requestAnimationFrame(function () {
+	                            var length = void 0;
+	                            storeStateLeft = (0, _sAlertDataPrep2.default)('left') || [];
+	                            length = storeStateLeft.length;
+	                            if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
+	                                var id = storeStateLeft[0].id;
+	                                _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
+	                                storeStateLeft = (0, _sAlertDataPrep2.default)('left') || [];
+	                            }
+	                            _this2.setState({ dataLeft: storeStateLeft });
+	                        });
+	                    });
 	                };
 	                this.unsubStoreLeft = _sAlertStore2.default.subscribe(addToStoreLeft);
 
 	                var addToStoreTop = function addToStoreTop() {
-	                    var length = void 0;
-	                    storeStateTop = (0, _sAlertDataPrep2.default)('full-top') || [];
-	                    length = storeStateTop.length;
-	                    if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
-	                        var id = storeStateTop[0].id;
-	                        _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
-	                        storeStateTop = (0, _sAlertDataPrep2.default)('full-top') || [];
-	                    }
-	                    _this2.setState({ dataTop: storeStateTop });
+	                    requestAnimationFrame(function () {
+	                        return requestAnimationFrame(function () {
+	                            var length = void 0;
+	                            storeStateTop = (0, _sAlertDataPrep2.default)('full-top') || [];
+	                            length = storeStateTop.length;
+	                            if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
+	                                var id = storeStateTop[0].id;
+	                                _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
+	                                storeStateTop = (0, _sAlertDataPrep2.default)('full-top') || [];
+	                            }
+	                            _this2.setState({ dataTop: storeStateTop });
+	                        });
+	                    });
 	                };
 	                this.unsubStoreTop = _sAlertStore2.default.subscribe(addToStoreTop);
 
 	                var addToStoreBottom = function addToStoreBottom() {
-	                    var length = void 0;
-	                    storeStateBottom = (0, _sAlertDataPrep2.default)('full-bottom') || [];
-	                    length = storeStateBottom.length;
-	                    if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
-	                        var id = storeStateBottom[0].id;
-	                        _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
-	                        storeStateBottom = (0, _sAlertDataPrep2.default)('full-bottom') || [];
-	                    }
-	                    _this2.setState({ dataBottom: storeStateBottom });
+	                    requestAnimationFrame(function () {
+	                        return requestAnimationFrame(function () {
+	                            var length = void 0;
+	                            storeStateBottom = (0, _sAlertDataPrep2.default)('full-bottom') || [];
+	                            length = storeStateBottom.length;
+	                            if (_this2.props.stack && _this2.props.stack.limit && length > _this2.props.stack.limit) {
+	                                var id = storeStateBottom[0].id;
+	                                _sAlertStore2.default.dispatch({ type: 'REMOVE', data: { id: id } });
+	                                storeStateBottom = (0, _sAlertDataPrep2.default)('full-bottom') || [];
+	                            }
+	                            _this2.setState({ dataBottom: storeStateBottom });
+	                        });
+	                    });
 	                };
 	                this.unsubStoreBottom = _sAlertStore2.default.subscribe(addToStoreBottom);
 
@@ -4602,6 +4632,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	    }
 
+	    var _extends = Object.assign || function (target) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            var source = arguments[i];
+
+	            for (var key in source) {
+	                if (Object.prototype.hasOwnProperty.call(source, key)) {
+	                    target[key] = source[key];
+	                }
+	            }
+	        }
+
+	        return target;
+	    };
+
 	    var getAlertData = function getAlertData(sAlertPosition) {
 	        var positionTop = 0;
 	        var positionBottom = 0;
@@ -4715,13 +4759,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                if (sAlertPosition === 'right') {
 	                    style = style + 'right: ' + (aStack.spacing || parseInt(sAlertComputedStyle.right)) + 'px;';
 	                }
-	                alerts = Object.assign({}, alert, { boxPosition: style });
+	                alerts = _extends({}, alert, { boxPosition: style });
 	                _reactDom2.default.unmountComponentAtNode(docElement);
 	                docElement.parentNode.removeChild(docElement);
 	            } else if (aOffset && positionTypeTop) {
-	                alerts = Object.assign({}, alert, { boxPosition: 'top: ' + parseInt(aOffset) + 'px;' });
+	                alerts = _extends({}, alert, { boxPosition: 'top: ' + parseInt(aOffset) + 'px;' });
 	            } else if (aOffset && positionTypeBottom) {
-	                alerts = Object.assign({}, alert, { boxPosition: 'bottom: ' + parseInt(aOffset) + 'px;' });
+	                alerts = _extends({}, alert, { boxPosition: 'bottom: ' + parseInt(aOffset) + 'px;' });
 	            } else {
 	                alerts = alert;
 	            }
@@ -4830,9 +4874,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(CONST_VAR, 'CONST_VAR', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Const.js');
+	  __REACT_HOT_LOADER__.register(CONST_VAR, 'CONST_VAR', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Const.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Const.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Const.js');
 	}();
 
 	;
@@ -5286,11 +5330,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableHeaderColumn, 'TableHeaderColumn', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(TableHeaderColumn, 'TableHeaderColumn', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeaderColumn.js');
 
-	  __REACT_HOT_LOADER__.register(filterTypeArray, 'filterTypeArray', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(filterTypeArray, 'filterTypeArray', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeaderColumn.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeaderColumn.js');
 	}();
 
 	;
@@ -5448,7 +5492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/util.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/util.js');
 	}();
 
 	;
@@ -5670,13 +5714,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(legalComparators, 'legalComparators', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Date.js');
+	  __REACT_HOT_LOADER__.register(legalComparators, 'legalComparators', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Date.js');
 
-	  __REACT_HOT_LOADER__.register(dateParser, 'dateParser', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Date.js');
+	  __REACT_HOT_LOADER__.register(dateParser, 'dateParser', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Date.js');
 
-	  __REACT_HOT_LOADER__.register(DateFilter, 'DateFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Date.js');
+	  __REACT_HOT_LOADER__.register(DateFilter, 'DateFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Date.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Date.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Date.js');
 	}();
 
 	;
@@ -5825,9 +5869,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TextFilter, 'TextFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Text.js');
+	  __REACT_HOT_LOADER__.register(TextFilter, 'TextFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Text.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Text.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Text.js');
 	}();
 
 	;
@@ -5960,9 +6004,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(RegexFilter, 'RegexFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Regex.js');
+	  __REACT_HOT_LOADER__.register(RegexFilter, 'RegexFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Regex.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Regex.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Regex.js');
 	}();
 
 	;
@@ -6158,11 +6202,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(optionsEquals, 'optionsEquals', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Select.js');
+	  __REACT_HOT_LOADER__.register(optionsEquals, 'optionsEquals', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Select.js');
 
-	  __REACT_HOT_LOADER__.register(SelectFilter, 'SelectFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Select.js');
+	  __REACT_HOT_LOADER__.register(SelectFilter, 'SelectFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Select.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Select.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Select.js');
 	}();
 
 	;
@@ -6439,11 +6483,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(legalComparators, 'legalComparators', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Number.js');
+	  __REACT_HOT_LOADER__.register(legalComparators, 'legalComparators', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Number.js');
 
-	  __REACT_HOT_LOADER__.register(NumberFilter, 'NumberFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Number.js');
+	  __REACT_HOT_LOADER__.register(NumberFilter, 'NumberFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Number.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filters/Number.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/filters/Number.js');
 	}();
 
 	;
@@ -6723,13 +6767,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(Checkbox, 'Checkbox', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeader.js');
+	  __REACT_HOT_LOADER__.register(Checkbox, 'Checkbox', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeader.js');
 
-	  __REACT_HOT_LOADER__.register(getSortOrder, 'getSortOrder', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeader.js');
+	  __REACT_HOT_LOADER__.register(getSortOrder, 'getSortOrder', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeader.js');
 
-	  __REACT_HOT_LOADER__.register(TableHeader, 'TableHeader', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeader.js');
+	  __REACT_HOT_LOADER__.register(TableHeader, 'TableHeader', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeader.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableHeader.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableHeader.js');
 	}();
 
 	;
@@ -6799,9 +6843,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(SelectRowHeaderColumn, 'SelectRowHeaderColumn', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/SelectRowHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(SelectRowHeaderColumn, 'SelectRowHeaderColumn', 'C:/Users/L450/Desktop/react-bootstrap-table/src/SelectRowHeaderColumn.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/SelectRowHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/SelectRowHeaderColumn.js');
 	}();
 
 	;
@@ -6872,9 +6916,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(ExpandRowHeaderColumn, 'ExpandRowHeaderColumn', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/ExpandRowHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(ExpandRowHeaderColumn, 'ExpandRowHeaderColumn', 'C:/Users/L450/Desktop/react-bootstrap-table/src/ExpandRowHeaderColumn.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/ExpandRowHeaderColumn.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/ExpandRowHeaderColumn.js');
 	}();
 
 	;
@@ -7019,9 +7063,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableFooter, 'TableFooter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableFooter.js');
+	  __REACT_HOT_LOADER__.register(TableFooter, 'TableFooter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableFooter.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableFooter.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableFooter.js');
 	}();
 
 	;
@@ -7806,9 +7850,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableBody, 'TableBody', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableBody.js');
+	  __REACT_HOT_LOADER__.register(TableBody, 'TableBody', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableBody.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableBody.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableBody.js');
 	}();
 
 	;
@@ -8063,9 +8107,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableRow, 'TableRow', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableRow.js');
+	  __REACT_HOT_LOADER__.register(TableRow, 'TableRow', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableRow.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableRow.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableRow.js');
 	}();
 
 	;
@@ -8343,9 +8387,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableColumn, 'TableColumn', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableColumn.js');
+	  __REACT_HOT_LOADER__.register(TableColumn, 'TableColumn', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableColumn.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableColumn.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableColumn.js');
 	}();
 
 	;
@@ -8799,9 +8843,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableEditColumn, 'TableEditColumn', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableEditColumn.js');
+	  __REACT_HOT_LOADER__.register(TableEditColumn, 'TableEditColumn', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableEditColumn.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableEditColumn.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableEditColumn.js');
 	}();
 
 	;
@@ -8949,9 +8993,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(editor, 'editor', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Editor.js');
+	  __REACT_HOT_LOADER__.register(editor, 'editor', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Editor.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Editor.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Editor.js');
 	}();
 
 	;
@@ -8994,7 +9038,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(notice, 'notice', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Notification.js');
+	  __REACT_HOT_LOADER__.register(notice, 'notice', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Notification.js');
 	}();
 
 	;
@@ -9075,9 +9119,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(ExpandComponent, 'ExpandComponent', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/ExpandComponent.js');
+	  __REACT_HOT_LOADER__.register(ExpandComponent, 'ExpandComponent', 'C:/Users/L450/Desktop/react-bootstrap-table/src/ExpandComponent.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/ExpandComponent.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/ExpandComponent.js');
 	}();
 
 	;
@@ -9538,9 +9582,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(PaginationList, 'PaginationList', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/PaginationList.js');
+	  __REACT_HOT_LOADER__.register(PaginationList, 'PaginationList', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/PaginationList.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/PaginationList.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/PaginationList.js');
 	}();
 
 	;
@@ -9645,9 +9689,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(PageButton, 'PageButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/PageButton.js');
+	  __REACT_HOT_LOADER__.register(PageButton, 'PageButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/PageButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/PageButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/PageButton.js');
 	}();
 
 	;
@@ -9768,11 +9812,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(sizePerPageDefaultClass, 'sizePerPageDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
+	  __REACT_HOT_LOADER__.register(sizePerPageDefaultClass, 'sizePerPageDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
 
-	  __REACT_HOT_LOADER__.register(SizePerPageDropDown, 'SizePerPageDropDown', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
+	  __REACT_HOT_LOADER__.register(SizePerPageDropDown, 'SizePerPageDropDown', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/pagination/SizePerPageDropDown.js');
 	}();
 
 	;
@@ -10496,9 +10540,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(ToolBar, 'ToolBar', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ToolBar.js');
+	  __REACT_HOT_LOADER__.register(ToolBar, 'ToolBar', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ToolBar.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ToolBar.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ToolBar.js');
 	}();
 
 	;
@@ -10707,15 +10751,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }),
 	  portalClassName: _propTypes2.default.string,
 	  bodyOpenClassName: _propTypes2.default.string,
-	  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
-	  overlayClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
+	  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
+	    base: _propTypes2.default.string.isRequired,
+	    afterOpen: _propTypes2.default.string.isRequired,
+	    beforeClose: _propTypes2.default.string.isRequired
+	  })]),
+	  overlayClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
+	    base: _propTypes2.default.string.isRequired,
+	    afterOpen: _propTypes2.default.string.isRequired,
+	    beforeClose: _propTypes2.default.string.isRequired
+	  })]),
 	  appElement: _propTypes2.default.instanceOf(_safeHTMLElement2.default),
 	  onAfterOpen: _propTypes2.default.func,
 	  onRequestClose: _propTypes2.default.func,
 	  closeTimeoutMS: _propTypes2.default.number,
 	  ariaHideApp: _propTypes2.default.bool,
-	  shouldFocusAfter: _propTypes2.default.bool,
+	  shouldFocusAfterRender: _propTypes2.default.bool,
 	  shouldCloseOnOverlayClick: _propTypes2.default.bool,
+	  shouldReturnFocusAfterClose: _propTypes2.default.bool,
 	  parentSelector: _propTypes2.default.func,
 	  aria: _propTypes2.default.object,
 	  role: _propTypes2.default.string,
@@ -10731,6 +10784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  shouldFocusAfterRender: true,
 	  shouldCloseOnEsc: true,
 	  shouldCloseOnOverlayClick: true,
+	  shouldReturnFocusAfterClose: true,
 	  parentSelector: function parentSelector() {
 	    return document.body;
 	  }
@@ -10849,8 +10903,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    _this.afterClose = function () {
-	      focusManager.returnFocus();
-	      focusManager.teardownScopedFocus();
+	      // Remove body class
+	      bodyClassList.remove(_this.props.bodyOpenClassName);
+
+	      if (_this.props.shouldFocusAfterRender) {
+	        if (_this.props.shouldReturnFocusAfterClose) {
+	          focusManager.returnFocus();
+	          focusManager.teardownScopedFocus();
+	        } else {
+	          focusManager.popWithoutFocus();
+	        }
+	      }
 	    };
 
 	    _this.open = function () {
@@ -10859,8 +10922,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        clearTimeout(_this.closeTimer);
 	        _this.setState({ beforeClose: false });
 	      } else {
-	        focusManager.setupScopedFocus(_this.node);
-	        focusManager.markForFocusLater();
+	        if (_this.props.shouldFocusAfterRender) {
+	          focusManager.setupScopedFocus(_this.node);
+	          focusManager.markForFocusLater();
+	        }
+
 	        _this.setState({ isOpen: true }, function () {
 	          _this.setState({ afterOpen: true });
 
@@ -11036,6 +11102,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: "componentWillUnmount",
 	    value: function componentWillUnmount() {
+	      // Remove body class
+	      bodyClassList.remove(this.props.bodyOpenClassName);
 	      this.beforeClose();
 	      clearTimeout(this.closeTimer);
 	    }
@@ -11059,12 +11127,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function beforeClose() {
 	      var _props2 = this.props,
 	          appElement = _props2.appElement,
-	          ariaHideApp = _props2.ariaHideApp,
-	          bodyOpenClassName = _props2.bodyOpenClassName;
-	      // Remove class if no more modals are open
-
-	      bodyClassList.remove(bodyOpenClassName);
+	          ariaHideApp = _props2.ariaHideApp;
 	      // Reset aria-hidden attribute if all modals have been removed
+
 	      if (ariaHideApp && refCount.totalCount() < 1) {
 	        ariaAppHider.show(appElement);
 	      }
@@ -11142,6 +11207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  closeTimeoutMS: _propTypes2.default.number,
 	  shouldFocusAfterRender: _propTypes2.default.bool,
 	  shouldCloseOnOverlayClick: _propTypes2.default.bool,
+	  shouldReturnFocusAfterClose: _propTypes2.default.bool,
 	  role: _propTypes2.default.string,
 	  contentLabel: _propTypes2.default.string,
 	  aria: _propTypes2.default.object,
@@ -11165,6 +11231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.handleFocus = handleFocus;
 	exports.markForFocusLater = markForFocusLater;
 	exports.returnFocus = returnFocus;
+	exports.popWithoutFocus = popWithoutFocus;
 	exports.setupScopedFocus = setupScopedFocus;
 	exports.teardownScopedFocus = teardownScopedFocus;
 
@@ -11219,6 +11286,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	}
 	/* eslint-enable no-console */
+
+	function popWithoutFocus() {
+	  focusLaterElements.length > 0 && focusLaterElements.pop();
+	}
 
 	function setupScopedFocus(element) {
 	  modalElement = element;
@@ -11319,18 +11390,64 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function scopeTab(node, event) {
 	  var tabbable = (0, _tabbable2.default)(node);
+
 	  if (!tabbable.length) {
+	    // Do nothing, since there are no elements that can receive focus.
 	    event.preventDefault();
 	    return;
 	  }
-	  var finalTabbable = tabbable[event.shiftKey ? 0 : tabbable.length - 1];
-	  var leavingFinalTabbable = finalTabbable === document.activeElement ||
-	  // handle immediate shift+tab after opening with mouse
-	  node === document.activeElement;
-	  if (!leavingFinalTabbable) return;
+
+	  var shiftKey = event.shiftKey;
+	  var head = tabbable[0];
+	  var tail = tabbable[tabbable.length - 1];
+
+	  // proceed with default browser behavior
+	  if (node === document.activeElement) {
+	    return;
+	  }
+
+	  var target;
+	  if (tail === document.activeElement && !shiftKey) {
+	    target = head;
+	  }
+
+	  if (head === document.activeElement && shiftKey) {
+	    target = tail;
+	  }
+
+	  if (target) {
+	    event.preventDefault();
+	    target.focus();
+	    return;
+	  }
+
+	  // Safari radio issue.
+	  //
+	  // Safari does not move the focus to the radio button,
+	  // so we need to force it to really walk through all elements.
+	  //
+	  // This is very error prune, since we are trying to guess
+	  // if it is a safari browser from the first occurence between
+	  // chrome or safari.
+	  //
+	  // The chrome user agent contains the first ocurrence
+	  // as the 'chrome/version' and later the 'safari/version'.
+	  var checkSafari = /(\bChrome\b|\bSafari\b)\//.exec(navigator.userAgent);
+	  var isSafariDesktop = checkSafari != null && checkSafari[1] != "Chrome" && /\biPod\b|\biPad\b/g.exec(navigator.userAgent) == null;
+
+	  // If we are not in safari desktop, let the browser control
+	  // the focus
+	  if (!isSafariDesktop) return;
+
+	  var x = tabbable.indexOf(document.activeElement);
+
+	  if (x > -1) {
+	    x += shiftKey ? -1 : 1;
+	  }
+
 	  event.preventDefault();
-	  var target = tabbable[event.shiftKey ? tabbable.length - 1 : 0];
-	  target.focus();
+
+	  tabbable[x].focus();
 	}
 	module.exports = exports["default"];
 
@@ -11736,11 +11853,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(defaultModalClassName, 'defaultModalClassName', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModal.js');
+	  __REACT_HOT_LOADER__.register(defaultModalClassName, 'defaultModalClassName', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModal.js');
 
-	  __REACT_HOT_LOADER__.register(InsertModal, 'InsertModal', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModal.js');
+	  __REACT_HOT_LOADER__.register(InsertModal, 'InsertModal', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModal.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModal.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModal.js');
 	}();
 
 	;
@@ -11900,9 +12017,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(InsertModalHeader, 'InsertModalHeader', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalHeader.js');
+	  __REACT_HOT_LOADER__.register(InsertModalHeader, 'InsertModalHeader', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalHeader.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalHeader.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalHeader.js');
 	}();
 
 	;
@@ -12071,9 +12188,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(InsertModalFooter, 'InsertModalFooter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalFooter.js');
+	  __REACT_HOT_LOADER__.register(InsertModalFooter, 'InsertModalFooter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalFooter.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalFooter.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalFooter.js');
 	}();
 
 	;
@@ -12236,9 +12353,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(InsertModalBody, 'InsertModalBody', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalBody.js');
+	  __REACT_HOT_LOADER__.register(InsertModalBody, 'InsertModalBody', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalBody.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertModalBody.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertModalBody.js');
 	}();
 
 	;
@@ -12347,11 +12464,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(insertBtnDefaultClass, 'insertBtnDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertButton.js');
+	  __REACT_HOT_LOADER__.register(insertBtnDefaultClass, 'insertBtnDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertButton.js');
 
-	  __REACT_HOT_LOADER__.register(InsertButton, 'InsertButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertButton.js');
+	  __REACT_HOT_LOADER__.register(InsertButton, 'InsertButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/InsertButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/InsertButton.js');
 	}();
 
 	;
@@ -12460,11 +12577,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(deleteBtnDefaultClass, 'deleteBtnDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/DeleteButton.js');
+	  __REACT_HOT_LOADER__.register(deleteBtnDefaultClass, 'deleteBtnDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/DeleteButton.js');
 
-	  __REACT_HOT_LOADER__.register(DeleteButton, 'DeleteButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/DeleteButton.js');
+	  __REACT_HOT_LOADER__.register(DeleteButton, 'DeleteButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/DeleteButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/DeleteButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/DeleteButton.js');
 	}();
 
 	;
@@ -12573,11 +12690,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(exportCsvBtnDefaultClass, 'exportCsvBtnDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
+	  __REACT_HOT_LOADER__.register(exportCsvBtnDefaultClass, 'exportCsvBtnDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
 
-	  __REACT_HOT_LOADER__.register(ExportCSVButton, 'ExportCSVButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
+	  __REACT_HOT_LOADER__.register(ExportCSVButton, 'ExportCSVButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ExportCSVButton.js');
 	}();
 
 	;
@@ -12689,11 +12806,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(showSelectedOnlyBtnDefaultClass, 'showSelectedOnlyBtnDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
+	  __REACT_HOT_LOADER__.register(showSelectedOnlyBtnDefaultClass, 'showSelectedOnlyBtnDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
 
-	  __REACT_HOT_LOADER__.register(ShowSelectedOnlyButton, 'ShowSelectedOnlyButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
+	  __REACT_HOT_LOADER__.register(ShowSelectedOnlyButton, 'ShowSelectedOnlyButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ShowSelectedOnlyButton.js');
 	}();
 
 	;
@@ -12799,9 +12916,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(SearchField, 'SearchField', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/SearchField.js');
+	  __REACT_HOT_LOADER__.register(SearchField, 'SearchField', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/SearchField.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/SearchField.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/SearchField.js');
 	}();
 
 	;
@@ -12902,11 +13019,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(clearBtnDefaultClass, 'clearBtnDefaultClass', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
+	  __REACT_HOT_LOADER__.register(clearBtnDefaultClass, 'clearBtnDefaultClass', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
 
-	  __REACT_HOT_LOADER__.register(ClearSearchButton, 'ClearSearchButton', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
+	  __REACT_HOT_LOADER__.register(ClearSearchButton, 'ClearSearchButton', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ClearSearchButton.js');
 	}();
 
 	;
@@ -13065,9 +13182,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableFilter, 'TableFilter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableFilter.js');
+	  __REACT_HOT_LOADER__.register(TableFilter, 'TableFilter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableFilter.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/TableFilter.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/TableFilter.js');
 	}();
 
 	;
@@ -13941,7 +14058,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableDataStore, 'TableDataStore', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/store/TableDataStore.js');
+	  __REACT_HOT_LOADER__.register(TableDataStore, 'TableDataStore', 'C:/Users/L450/Desktop/react-bootstrap-table/src/store/TableDataStore.js');
 	}();
 
 	;
@@ -14051,13 +14168,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(saveAs, 'saveAs', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/csv_export_util.js');
+	  __REACT_HOT_LOADER__.register(saveAs, 'saveAs', 'C:/Users/L450/Desktop/react-bootstrap-table/src/csv_export_util.js');
 
-	  __REACT_HOT_LOADER__.register(toString, 'toString', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/csv_export_util.js');
+	  __REACT_HOT_LOADER__.register(toString, 'toString', 'C:/Users/L450/Desktop/react-bootstrap-table/src/csv_export_util.js');
 
-	  __REACT_HOT_LOADER__.register(exportCSV, 'exportCSV', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/csv_export_util.js');
+	  __REACT_HOT_LOADER__.register(exportCSV, 'exportCSV', 'C:/Users/L450/Desktop/react-bootstrap-table/src/csv_export_util.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/csv_export_util.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/csv_export_util.js');
 	}();
 
 	;
@@ -14255,7 +14372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			return;
 		}
 
-		__REACT_HOT_LOADER__.register(saveAs, "saveAs", "/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/filesaver.js");
+		__REACT_HOT_LOADER__.register(saveAs, "saveAs", "C:/Users/L450/Desktop/react-bootstrap-table/src/filesaver.js");
 	}();
 
 	;
@@ -14359,7 +14476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(Filter, 'Filter', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/Filter.js');
+	  __REACT_HOT_LOADER__.register(Filter, 'Filter', 'C:/Users/L450/Desktop/react-bootstrap-table/src/Filter.js');
 	}();
 
 	;
@@ -14427,12 +14544,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      er = arguments[1];
 	      if (er instanceof Error) {
 	        throw er; // Unhandled 'error' event
-	      } else {
-	        // At least give some kind of context to the user
-	        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
-	        err.context = er;
-	        throw err;
 	      }
+	      throw TypeError('Uncaught, unspecified "error" event.');
 	    }
 	  }
 
@@ -14455,11 +14568,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        break;
 	      // slower
 	      default:
-	        args = Array.prototype.slice.call(arguments, 1);
+	        len = arguments.length;
+	        args = new Array(len - 1);
+	        for (i = 1; i < len; i++)
+	          args[i - 1] = arguments[i];
 	        handler.apply(this, args);
 	    }
 	  } else if (isObject(handler)) {
-	    args = Array.prototype.slice.call(arguments, 1);
+	    len = arguments.length;
+	    args = new Array(len - 1);
+	    for (i = 1; i < len; i++)
+	      args[i - 1] = arguments[i];
+
 	    listeners = handler.slice();
 	    len = listeners.length;
 	    for (i = 0; i < len; i++)
@@ -14497,6 +14617,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // Check for listener leak
 	  if (isObject(this._events[type]) && !this._events[type].warned) {
+	    var m;
 	    if (!isUndefined(this._maxListeners)) {
 	      m = this._maxListeners;
 	    } else {
@@ -14618,7 +14739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  if (isFunction(listeners)) {
 	    this.removeListener(type, listeners);
-	  } else if (listeners) {
+	  } else {
 	    // LIFO order
 	    while (listeners.length)
 	      this.removeListener(type, listeners[listeners.length - 1]);
@@ -14639,20 +14760,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return ret;
 	};
 
-	EventEmitter.prototype.listenerCount = function(type) {
-	  if (this._events) {
-	    var evlistener = this._events[type];
-
-	    if (isFunction(evlistener))
-	      return 1;
-	    else if (evlistener)
-	      return evlistener.length;
-	  }
-	  return 0;
-	};
-
 	EventEmitter.listenerCount = function(emitter, type) {
-	  return emitter.listenerCount(type);
+	  var ret;
+	  if (!emitter._events || !emitter._events[type])
+	    ret = 0;
+	  else if (isFunction(emitter._events[type]))
+	    ret = 1;
+	  else
+	    ret = emitter._events[type].length;
+	  return ret;
 	};
 
 	function isFunction(arg) {
@@ -14751,9 +14867,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(ButtonGroup, 'ButtonGroup', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ButtonGroup.js');
+	  __REACT_HOT_LOADER__.register(ButtonGroup, 'ButtonGroup', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ButtonGroup.js');
 
-	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/allen/Node/react-bootstrap-table-new/react-bootstrap-table/src/toolbar/ButtonGroup.js');
+	  __REACT_HOT_LOADER__.register(_default, 'default', 'C:/Users/L450/Desktop/react-bootstrap-table/src/toolbar/ButtonGroup.js');
 	}();
 
 	;
